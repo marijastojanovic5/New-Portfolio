@@ -1,5 +1,6 @@
 // General style
-@import "config";
+@import 'config';
+@import 'utilities' ;
 
 * {
   padding: 0;
@@ -25,4 +26,61 @@ h4 {
 }
 img {
   width: 100%;
+}
+//Logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+//Main nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  ul {
+    display: flex;
+
+  }
+  li {
+    padding: 1rem 1.5rem;
+  }
+  a {
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transform: border-color 0.5s;
+    &:hover {
+      border-color: $medium-color;
+    }
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+//Header
+#header {
+  &-home {
+    //Header home
+    background: $bg-image no-repeat center right/cover;
+    height: 100vh;
+    color: $medium-color;
+    //Header content
+    .header-content {
+      text-align: center;
+      padding-top: 50%;
+      padding-left: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+
+  }
+  //Header inner
+  
 }
