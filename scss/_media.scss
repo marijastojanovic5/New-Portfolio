@@ -1,0 +1,107 @@
+//Tablets and smaller
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+  #work-a {
+    height: 100vh;
+  }
+}
+//Smartphones
+@media (max-width: 500px) {
+  #header-home {
+    height: 10rem;
+    border-bottom: 3px solid $main-color;
+    .header-content {
+      display: none;
+    }
+  }
+  #header-inner {
+    height: 10rem;
+    background-position: 20% 30%;
+  }
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+  //stack grid columns
+  #home-a .specials,
+  #home-b .stats,
+  #contact-b .contact-info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+  //about
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bioimage"
+          "bio"
+          "aw1"
+          "aw2"
+          "aw3";
+      }
+      .font-p {
+        font-size: 1.2rem;
+      
+        
+      }
+    }
+  }
+  //contact
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
+      }
+    }
+    &-b {
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+      &-c {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  //footer
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+}
+@media(max-height: 580px){
+  #header-home {
+    .header-content {
+    padding-top: 3rem;
+    }
+  }
+}
+
