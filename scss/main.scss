@@ -1,6 +1,7 @@
 // General style
 @import "config";
 @import "utilities";
+@import "item_grid";
 
 * {
   padding: 0;
@@ -131,7 +132,7 @@ img {
       display: grid;
       grid-template-areas:
         "bioimage bio bio"
-        "aw1 aw2 aw3";
+        "aw1 aw3 aw3";
       grid-gap: 1.2rem;
     }
     //grid areas
@@ -145,18 +146,18 @@ img {
     }
     .award-1 {
       grid-area: aw1;
-    }
-    .award-2 {
-      grid-area: aw2;
+      margin-left: 2rem;
+
     }
     .award-3 {
       grid-area: aw3;
     }
+
     .award-1 .fas,
-    .award-2 .fas,
     .award-3 .fas {
       color: $main-color;
       margin: 1rem;
+      
     }
   }
   &-b {
@@ -173,7 +174,58 @@ img {
         text-align: center;
         background-color: $main-color;
       }
+    }
+  }
+}
 
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2 rem;
+
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[type="submit"] {
+      width: 50%;
+      margin-top: 10px;
+    }
+  }
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+  &-c {
+    h1 {
+      text-align: center;
+      font-size: 4rem;
     }
   }
 }
@@ -206,4 +258,3 @@ img {
     }
   }
 }
-
