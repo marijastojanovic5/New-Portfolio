@@ -375,6 +375,10 @@ img {
     grid-template-areas: "bioimage" "bio" "aw1" "aw2" "aw3"; }
   #about-a .font-p {
     font-size: 1.2rem; }
+  #work-a .item-text-category {
+    font-size: .5rem; }
+  #work-a .item-text-title {
+    font-size: .6rem; }
   #contact-a .text-fields {
     grid-template-areas: "name" "subject" "email" "phone" "message"; }
   #contact-b div {
